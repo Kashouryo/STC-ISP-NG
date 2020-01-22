@@ -126,13 +126,14 @@ namespace STC_ISP_NG
             {
                 commandGenerated += $" -P auto";
             }
-            if (eraseEEPROM)
-            {
-                commandGenerated += $" -o";
-            }
+            commandGenerated += $" -o";
+
             if (eraseEEPROM)
             {
                 commandGenerated += $" eeprom_erase_enabled=true";
+            }
+            else {
+                commandGenerated += $" eeprom_erase_enabled=false";
             }
 
             commandGenerated += $" {romPath}";
