@@ -148,7 +148,16 @@ namespace STC_ISP_NG
             }
             button5.Enabled = false;
             button4.Enabled = false;
-            consoleControl1.StartProcess("./runtime/python.exe", $"./runtime/stcgal/__main__.py -P stc15 -p {comboBoxSerial.SelectedItem.ToString()}");
+            string proto = "";
+            if (comboBoxProtocol.SelectedItem.ToString()=="自动检测")
+            {
+                proto = "auto";
+            }
+            else
+            {
+                proto = comboBoxProtocol.SelectedItem.ToString();
+            }
+            consoleControl1.StartProcess("./runtime/python.exe", $"./runtime/stcgal/__main__.py -P {proto} -p {comboBoxSerial.SelectedItem.ToString()}");
             while (consoleControl1.IsProcessRunning)
             {
                 Application.DoEvents();

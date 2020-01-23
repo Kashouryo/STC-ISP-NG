@@ -34,6 +34,7 @@
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.hexBoxPRG = new Be.Windows.Forms.HexBox();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.hexBoxEEPROM = new Be.Windows.Forms.HexBox();
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.textBox6 = new System.Windows.Forms.TextBox();
             this.tabPage4 = new System.Windows.Forms.TabPage();
@@ -73,11 +74,10 @@
             this.tableLayoutPanel8 = new System.Windows.Forms.TableLayoutPanel();
             this.comboBoxProtocol = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.hexBoxEEPROM = new Be.Windows.Forms.HexBox();
             this.tabControl2 = new System.Windows.Forms.TabControl();
             this.tabPage5 = new System.Windows.Forms.TabPage();
-            this.tabPage6 = new System.Windows.Forms.TabPage();
             this.checkBoxEraseEEPROM = new System.Windows.Forms.CheckBox();
+            this.tabPage6 = new System.Windows.Forms.TabPage();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             this.tabControl1.SuspendLayout();
@@ -147,7 +147,7 @@
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(671, 236);
+            this.tabPage1.Size = new System.Drawing.Size(671, 247);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "程序文件";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -159,7 +159,7 @@
             this.hexBoxPRG.Location = new System.Drawing.Point(3, 3);
             this.hexBoxPRG.Name = "hexBoxPRG";
             this.hexBoxPRG.ShadowSelectionColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(60)))), ((int)(((byte)(188)))), ((int)(((byte)(255)))));
-            this.hexBoxPRG.Size = new System.Drawing.Size(665, 230);
+            this.hexBoxPRG.Size = new System.Drawing.Size(665, 241);
             this.hexBoxPRG.StringViewVisible = true;
             this.hexBoxPRG.TabIndex = 0;
             this.hexBoxPRG.VScrollBarVisible = true;
@@ -170,17 +170,29 @@
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(671, 236);
+            this.tabPage2.Size = new System.Drawing.Size(671, 247);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "EEPROM文件";
             this.tabPage2.UseVisualStyleBackColor = true;
+            // 
+            // hexBoxEEPROM
+            // 
+            this.hexBoxEEPROM.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.hexBoxEEPROM.Font = new System.Drawing.Font("Microsoft YaHei UI", 9F);
+            this.hexBoxEEPROM.Location = new System.Drawing.Point(3, 3);
+            this.hexBoxEEPROM.Name = "hexBoxEEPROM";
+            this.hexBoxEEPROM.ShadowSelectionColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(60)))), ((int)(((byte)(188)))), ((int)(((byte)(255)))));
+            this.hexBoxEEPROM.Size = new System.Drawing.Size(665, 241);
+            this.hexBoxEEPROM.StringViewVisible = true;
+            this.hexBoxEEPROM.TabIndex = 1;
+            this.hexBoxEEPROM.VScrollBarVisible = true;
             // 
             // tabPage3
             // 
             this.tabPage3.Controls.Add(this.textBox6);
             this.tabPage3.Location = new System.Drawing.Point(4, 22);
             this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Size = new System.Drawing.Size(671, 236);
+            this.tabPage3.Size = new System.Drawing.Size(671, 247);
             this.tabPage3.TabIndex = 0;
             this.tabPage3.Text = "版本修订历史";
             this.tabPage3.UseVisualStyleBackColor = true;
@@ -191,7 +203,7 @@
             this.textBox6.Location = new System.Drawing.Point(0, 0);
             this.textBox6.Multiline = true;
             this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(671, 236);
+            this.textBox6.Size = new System.Drawing.Size(671, 247);
             this.textBox6.TabIndex = 2;
             this.textBox6.Text = "Ver 0.5.0 (2020-1-20)\r\n      1.基本下载功能";
             // 
@@ -262,7 +274,7 @@
             this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 18.107F));
             this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 69F));
             this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 73F));
-            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 53F));
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 54F));
             this.tableLayoutPanel4.Controls.Add(this.checkBox1, 2, 0);
             this.tableLayoutPanel4.Controls.Add(this.textBox3, 4, 0);
             this.tableLayoutPanel4.Controls.Add(this.label1, 3, 0);
@@ -282,7 +294,7 @@
             // 
             this.checkBox1.AutoSize = true;
             this.checkBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.checkBox1.Location = new System.Drawing.Point(421, 4);
+            this.checkBox1.Location = new System.Drawing.Point(420, 4);
             this.checkBox1.Name = "checkBox1";
             this.checkBox1.Size = new System.Drawing.Size(62, 20);
             this.checkBox1.TabIndex = 0;
@@ -292,7 +304,7 @@
             // textBox3
             // 
             this.textBox3.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.textBox3.Location = new System.Drawing.Point(556, 4);
+            this.textBox3.Location = new System.Drawing.Point(555, 4);
             this.textBox3.Margin = new System.Windows.Forms.Padding(1);
             this.textBox3.Name = "textBox3";
             this.textBox3.ReadOnly = true;
@@ -304,7 +316,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label1.Location = new System.Drawing.Point(487, 2);
+            this.label1.Location = new System.Drawing.Point(486, 2);
             this.label1.Margin = new System.Windows.Forms.Padding(1);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(67, 24);
@@ -315,10 +327,10 @@
             // button2
             // 
             this.button2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.button2.Location = new System.Drawing.Point(628, 1);
+            this.button2.Location = new System.Drawing.Point(627, 1);
             this.button2.Margin = new System.Windows.Forms.Padding(0);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(54, 26);
+            this.button2.Size = new System.Drawing.Size(55, 26);
             this.button2.TabIndex = 3;
             this.button2.Text = "重置";
             this.button2.UseVisualStyleBackColor = true;
@@ -679,14 +691,14 @@
             this.comboBoxProtocol.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxProtocol.FormattingEnabled = true;
             this.comboBoxProtocol.Items.AddRange(new object[] {
-            "STC89",
-            "STC12A",
-            "STC12B",
-            "STC12",
-            "STC15",
-            "STC15A",
-            "STC8",
-            "USB15",
+            "stc89",
+            "stc12a",
+            "stc12b",
+            "stc12",
+            "stc15",
+            "stc15a",
+            "stc8",
+            "usb15",
             "自动检测"});
             this.comboBoxProtocol.Location = new System.Drawing.Point(3, 24);
             this.comboBoxProtocol.MaximumSize = new System.Drawing.Size(265, 0);
@@ -704,18 +716,6 @@
             this.label2.TabIndex = 6;
             this.label2.Text = "下载协议：";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // hexBoxEEPROM
-            // 
-            this.hexBoxEEPROM.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.hexBoxEEPROM.Font = new System.Drawing.Font("Microsoft YaHei UI", 9F);
-            this.hexBoxEEPROM.Location = new System.Drawing.Point(3, 3);
-            this.hexBoxEEPROM.Name = "hexBoxEEPROM";
-            this.hexBoxEEPROM.ShadowSelectionColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(60)))), ((int)(((byte)(188)))), ((int)(((byte)(255)))));
-            this.hexBoxEEPROM.Size = new System.Drawing.Size(665, 230);
-            this.hexBoxEEPROM.StringViewVisible = true;
-            this.hexBoxEEPROM.TabIndex = 1;
-            this.hexBoxEEPROM.VScrollBarVisible = true;
             // 
             // tabControl2
             // 
@@ -739,16 +739,6 @@
             this.tabPage5.Text = "硬件选项";
             this.tabPage5.UseVisualStyleBackColor = true;
             // 
-            // tabPage6
-            // 
-            this.tabPage6.Location = new System.Drawing.Point(4, 22);
-            this.tabPage6.Name = "tabPage6";
-            this.tabPage6.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage6.Size = new System.Drawing.Size(259, 119);
-            this.tabPage6.TabIndex = 1;
-            this.tabPage6.Text = "自定义参数";
-            this.tabPage6.UseVisualStyleBackColor = true;
-            // 
             // checkBoxEraseEEPROM
             // 
             this.checkBoxEraseEEPROM.AutoSize = true;
@@ -759,6 +749,16 @@
             this.checkBoxEraseEEPROM.Text = "下次下载用户程序时擦除用户EEPROM区";
             this.checkBoxEraseEEPROM.UseVisualStyleBackColor = true;
             this.checkBoxEraseEEPROM.CheckedChanged += new System.EventHandler(this.checkBoxEraseEEPROM_CheckedChanged);
+            // 
+            // tabPage6
+            // 
+            this.tabPage6.Location = new System.Drawing.Point(4, 22);
+            this.tabPage6.Name = "tabPage6";
+            this.tabPage6.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage6.Size = new System.Drawing.Size(259, 134);
+            this.tabPage6.TabIndex = 1;
+            this.tabPage6.Text = "自定义参数";
+            this.tabPage6.UseVisualStyleBackColor = true;
             // 
             // MainUI
             // 
