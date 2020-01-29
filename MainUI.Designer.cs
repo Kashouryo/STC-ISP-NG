@@ -274,7 +274,7 @@
             this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 18.107F));
             this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 69F));
             this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 73F));
-            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 54F));
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 55F));
             this.tableLayoutPanel4.Controls.Add(this.checkBox1, 2, 0);
             this.tableLayoutPanel4.Controls.Add(this.textBox3, 4, 0);
             this.tableLayoutPanel4.Controls.Add(this.label1, 3, 0);
@@ -294,7 +294,7 @@
             // 
             this.checkBox1.AutoSize = true;
             this.checkBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.checkBox1.Location = new System.Drawing.Point(420, 4);
+            this.checkBox1.Location = new System.Drawing.Point(419, 4);
             this.checkBox1.Name = "checkBox1";
             this.checkBox1.Size = new System.Drawing.Size(62, 20);
             this.checkBox1.TabIndex = 0;
@@ -304,7 +304,7 @@
             // textBox3
             // 
             this.textBox3.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.textBox3.Location = new System.Drawing.Point(555, 4);
+            this.textBox3.Location = new System.Drawing.Point(554, 4);
             this.textBox3.Margin = new System.Windows.Forms.Padding(1);
             this.textBox3.Name = "textBox3";
             this.textBox3.ReadOnly = true;
@@ -316,7 +316,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label1.Location = new System.Drawing.Point(486, 2);
+            this.label1.Location = new System.Drawing.Point(485, 2);
             this.label1.Margin = new System.Windows.Forms.Padding(1);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(67, 24);
@@ -327,10 +327,10 @@
             // button2
             // 
             this.button2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.button2.Location = new System.Drawing.Point(627, 1);
+            this.button2.Location = new System.Drawing.Point(626, 1);
             this.button2.Margin = new System.Windows.Forms.Padding(0);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(55, 26);
+            this.button2.Size = new System.Drawing.Size(56, 26);
             this.button2.TabIndex = 3;
             this.button2.Text = "重置";
             this.button2.UseVisualStyleBackColor = true;

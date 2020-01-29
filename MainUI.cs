@@ -5,6 +5,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Diagnostics;
 using System.Drawing;
+using System.IO;
 using System.IO.Ports;
 using System.Linq;
 using System.Management;
@@ -18,9 +19,14 @@ namespace STC_ISP_NG
 {
     public partial class MainUI : Form
     {
+        private FileByteProvider byteProvider;
         public MainUI()
         {
             InitializeComponent();
+            if (!Directory.Exists("./temp"))
+            {
+                Directory.CreateDirectory("./temp");
+            }
             hexBoxPRG.Refresh();
             comboBoxProtocol.SelectedIndex = 0;
             //comboBoxSerial.SelectedIndex = 0;
@@ -90,11 +96,17 @@ namespace STC_ISP_NG
 
         private void buttonHex_Click(object sender, EventArgs e)
         {
+            if (byteProvider!=null)
+            {
+                byteProvider.Dispose();
+            }
             OpenFileDialog fileDialog = new OpenFileDialog();
             fileDialog.Filter = "Hex文件|*.hex|所有文件|*.*";
             if (fileDialog.ShowDialog()==DialogResult.OK)
             {
-                hexBoxPRG.ByteProvider = new FileByteProvider(fileDialog.FileName);
+                File.Copy(fileDialog.FileName,"./temp/" + Path.GetFileName(fileDialog.FileName),true);
+                byteProvider = new FileByteProvider("./temp/" + Path.GetFileName(fileDialog.FileName));
+                hexBoxPRG.ByteProvider = byteProvider;
                 textBoxHex.Text = fileDialog.FileName;
             }
             
