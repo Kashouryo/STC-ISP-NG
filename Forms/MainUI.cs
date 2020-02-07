@@ -67,7 +67,7 @@ namespace STC_ISP_NG
             }
             button5.Enabled = false;
             button4.Enabled = false;
-            consoleControl1.StartProcess("./runtime/python.exe", $"./runtime/stcgal/__main__.py "+ generateFlashCommand(textBoxHex.Text,
+            consoleControl1.StartProcess("./runtime/python.exe", $"./runtime/stcgal/__main__.py "+ generateFlashCommand("./temp/"+Path.GetFileName(textBoxHex.Text),
                 comboBoxProtocol.SelectedItem.ToString(),
                 comboBoxSerial.SelectedItem.ToString(),
                 comboBoxSpeed.SelectedItem.ToString(),
@@ -119,6 +119,8 @@ namespace STC_ISP_NG
                 byteProvider = new FileByteProvider("./temp/" + Path.GetFileName(fileDialog.FileName));
                 hexBoxPRG.ByteProvider = byteProvider;
                 textBoxHex.Text = fileDialog.FileName;
+                FileInfo fileInfo = new FileInfo("./temp/" + Path.GetFileName(fileDialog.FileName));
+                textBoxHexSize.Text = (fileInfo.Length/1024).ToString()+"KB";
             }
             
         }

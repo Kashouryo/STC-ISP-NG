@@ -32,7 +32,6 @@
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.hexBoxPRG = new Be.Windows.Forms.HexBox();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.hexBoxEEPROM = new Be.Windows.Forms.HexBox();
             this.tabPage3 = new System.Windows.Forms.TabPage();
@@ -86,6 +85,10 @@
             this.value = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label9 = new System.Windows.Forms.Label();
             this.comboBoxTrim = new System.Windows.Forms.ComboBox();
+            this.splitContainer1 = new System.Windows.Forms.SplitContainer();
+            this.hexBoxPRG = new Be.Windows.Forms.HexBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.textBoxHexSize = new System.Windows.Forms.TextBox();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             this.tabControl1.SuspendLayout();
@@ -107,6 +110,10 @@
             this.tabPage6.SuspendLayout();
             this.tabPage7.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
+            this.splitContainer1.Panel1.SuspendLayout();
+            this.splitContainer1.Panel2.SuspendLayout();
+            this.splitContainer1.SuspendLayout();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -155,7 +162,7 @@
             // 
             // tabPage1
             // 
-            this.tabPage1.Controls.Add(this.hexBoxPRG);
+            this.tabPage1.Controls.Add(this.splitContainer1);
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
@@ -163,18 +170,6 @@
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "程序文件";
             this.tabPage1.UseVisualStyleBackColor = true;
-            // 
-            // hexBoxPRG
-            // 
-            this.hexBoxPRG.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.hexBoxPRG.Font = new System.Drawing.Font("Microsoft YaHei UI", 9F);
-            this.hexBoxPRG.Location = new System.Drawing.Point(3, 3);
-            this.hexBoxPRG.Name = "hexBoxPRG";
-            this.hexBoxPRG.ShadowSelectionColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(60)))), ((int)(((byte)(188)))), ((int)(((byte)(255)))));
-            this.hexBoxPRG.Size = new System.Drawing.Size(665, 241);
-            this.hexBoxPRG.StringViewVisible = true;
-            this.hexBoxPRG.TabIndex = 0;
-            this.hexBoxPRG.VScrollBarVisible = true;
             // 
             // tabPage2
             // 
@@ -843,6 +838,53 @@
             this.comboBoxTrim.Size = new System.Drawing.Size(155, 21);
             this.comboBoxTrim.TabIndex = 9;
             // 
+            // splitContainer1
+            // 
+            this.splitContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.splitContainer1.Location = new System.Drawing.Point(3, 3);
+            this.splitContainer1.Name = "splitContainer1";
+            this.splitContainer1.Orientation = System.Windows.Forms.Orientation.Horizontal;
+            // 
+            // splitContainer1.Panel1
+            // 
+            this.splitContainer1.Panel1.Controls.Add(this.hexBoxPRG);
+            // 
+            // splitContainer1.Panel2
+            // 
+            this.splitContainer1.Panel2.Controls.Add(this.textBoxHexSize);
+            this.splitContainer1.Panel2.Controls.Add(this.label6);
+            this.splitContainer1.Size = new System.Drawing.Size(665, 241);
+            this.splitContainer1.SplitterDistance = 210;
+            this.splitContainer1.TabIndex = 0;
+            // 
+            // hexBoxPRG
+            // 
+            this.hexBoxPRG.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.hexBoxPRG.Font = new System.Drawing.Font("Microsoft YaHei UI", 9F);
+            this.hexBoxPRG.Location = new System.Drawing.Point(0, 0);
+            this.hexBoxPRG.Name = "hexBoxPRG";
+            this.hexBoxPRG.ShadowSelectionColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(60)))), ((int)(((byte)(188)))), ((int)(((byte)(255)))));
+            this.hexBoxPRG.Size = new System.Drawing.Size(665, 210);
+            this.hexBoxPRG.StringViewVisible = true;
+            this.hexBoxPRG.TabIndex = 1;
+            this.hexBoxPRG.VScrollBarVisible = true;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(4, 7);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(77, 13);
+            this.label6.TabIndex = 0;
+            this.label6.Text = "Hex文件大小:";
+            // 
+            // textBoxHexSize
+            // 
+            this.textBoxHexSize.Location = new System.Drawing.Point(84, 3);
+            this.textBoxHexSize.Name = "textBoxHexSize";
+            this.textBoxHexSize.Size = new System.Drawing.Size(100, 20);
+            this.textBoxHexSize.TabIndex = 1;
+            // 
             // MainUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -886,6 +928,11 @@
             this.tabPage6.PerformLayout();
             this.tabPage7.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.splitContainer1.Panel1.ResumeLayout(false);
+            this.splitContainer1.Panel2.ResumeLayout(false);
+            this.splitContainer1.Panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
+            this.splitContainer1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -903,7 +950,6 @@
         private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button button2;
-        private Be.Windows.Forms.HexBox hexBoxPRG;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel5;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel8;
         private System.Windows.Forms.ComboBox comboBoxProtocol;
@@ -949,6 +995,10 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn value;
         private System.Windows.Forms.ComboBox comboBoxTrim;
         private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.SplitContainer splitContainer1;
+        private Be.Windows.Forms.HexBox hexBoxPRG;
+        private System.Windows.Forms.TextBox textBoxHexSize;
+        private System.Windows.Forms.Label label6;
     }
 }
 
