@@ -28,11 +28,16 @@ namespace STC_ISP_NG
                 Directory.CreateDirectory("./temp");
             }
             hexBoxPRG.Refresh();
-            comboBoxProtocol.SelectedIndex = 0;
+            comboBoxProtocol.SelectedIndex = 8;
             //comboBoxSerial.SelectedIndex = 0;
             comboBoxSpeed.SelectedIndex = 0;
             comboBoxTrim.SelectedIndex = 0;
-            MessageBox.Show("EEPROM在下次下载用户程序时默认是不擦除的\r\n为提高用户程序安全性,建议用户先择下次下载时擦除EEPROM,\r\n即勾选上\"下次下载用户程序时擦除用户EEPROM区\"选项\r\n\r\n本软件仍处于测试阶段，仅开放基本hex下载功能","温馨提示",MessageBoxButtons.OK,MessageBoxIcon.Information);
+            MessageBox.Show("EEPROM在下次下载用户程序时默认是不擦除的\r\n为提高用户程序安全性,建议用户先择下次下载时擦除EEPROM,\r\n即勾选上\"下次下载用户程序时擦除用户EEPROM区\"选项","温馨提示",MessageBoxButtons.OK,MessageBoxIcon.Information);
+            updateSerial();
+            if (comboBoxSerial.Items.Count>0)
+            {
+                comboBoxSerial.SelectedIndex = 0;
+            }
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -82,15 +87,21 @@ namespace STC_ISP_NG
             button5.Enabled = true;
             button4.Enabled = true;
         }
-
-
-        private void comboBoxSerial_MouseClick(object sender, MouseEventArgs e)
-        {
+        private void updateSerial() {
             string[] ports = SerialPort.GetPortNames();
             comboBoxSerial.Items.Clear();
             foreach (string name in ports)
             {
                 comboBoxSerial.Items.Add(name);
+            }
+        }
+
+        private void comboBoxSerial_MouseClick(object sender, MouseEventArgs e)
+        {
+            updateSerial();
+            if (comboBoxSerial.Items.Count > 0)
+            {
+                comboBoxSerial.SelectedIndex = 0;
             }
         }
 
@@ -192,6 +203,11 @@ namespace STC_ISP_NG
         private void checkBoxEraseEEPROM_CheckedChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void buttonClearCustom_Click(object sender, EventArgs e)
+        {
+            textBoxCustomCommands.Text = "";
         }
     }
 }

@@ -56,10 +56,8 @@
             this.buttonHex = new System.Windows.Forms.Button();
             this.buttonEEPROM = new System.Windows.Forms.Button();
             this.tableLayoutPanel11 = new System.Windows.Forms.TableLayoutPanel();
-            this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.comboBoxSpeed = new System.Windows.Forms.ComboBox();
-            this.comboBoxTrim = new System.Windows.Forms.ComboBox();
             this.tableLayoutPanel9 = new System.Windows.Forms.TableLayoutPanel();
             this.comboBoxSerial = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
@@ -78,6 +76,16 @@
             this.tabPage5 = new System.Windows.Forms.TabPage();
             this.checkBoxEraseEEPROM = new System.Windows.Forms.CheckBox();
             this.tabPage6 = new System.Windows.Forms.TabPage();
+            this.buttonCustomHelp = new System.Windows.Forms.Button();
+            this.buttonClearCustom = new System.Windows.Forms.Button();
+            this.label8 = new System.Windows.Forms.Label();
+            this.textBoxCustomCommands = new System.Windows.Forms.TextBox();
+            this.tabPage7 = new System.Windows.Forms.TabPage();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.command = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.value = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.label9 = new System.Windows.Forms.Label();
+            this.comboBoxTrim = new System.Windows.Forms.ComboBox();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             this.tabControl1.SuspendLayout();
@@ -96,6 +104,9 @@
             this.tableLayoutPanel8.SuspendLayout();
             this.tabControl2.SuspendLayout();
             this.tabPage5.SuspendLayout();
+            this.tabPage6.SuspendLayout();
+            this.tabPage7.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -132,6 +143,7 @@
             // 
             this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Controls.Add(this.tabPage2);
+            this.tabControl1.Controls.Add(this.tabPage7);
             this.tabControl1.Controls.Add(this.tabPage3);
             this.tabControl1.Controls.Add(this.tabPage4);
             this.tabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -274,7 +286,7 @@
             this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 18.107F));
             this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 69F));
             this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 73F));
-            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 55F));
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 57F));
             this.tableLayoutPanel4.Controls.Add(this.checkBox1, 2, 0);
             this.tableLayoutPanel4.Controls.Add(this.textBox3, 4, 0);
             this.tableLayoutPanel4.Controls.Add(this.label1, 3, 0);
@@ -294,9 +306,9 @@
             // 
             this.checkBox1.AutoSize = true;
             this.checkBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.checkBox1.Location = new System.Drawing.Point(419, 4);
+            this.checkBox1.Location = new System.Drawing.Point(418, 4);
             this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(62, 20);
+            this.checkBox1.Size = new System.Drawing.Size(61, 20);
             this.checkBox1.TabIndex = 0;
             this.checkBox1.Text = "提示音";
             this.checkBox1.UseVisualStyleBackColor = true;
@@ -304,7 +316,7 @@
             // textBox3
             // 
             this.textBox3.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.textBox3.Location = new System.Drawing.Point(554, 4);
+            this.textBox3.Location = new System.Drawing.Point(552, 4);
             this.textBox3.Margin = new System.Windows.Forms.Padding(1);
             this.textBox3.Name = "textBox3";
             this.textBox3.ReadOnly = true;
@@ -316,7 +328,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label1.Location = new System.Drawing.Point(485, 2);
+            this.label1.Location = new System.Drawing.Point(483, 2);
             this.label1.Margin = new System.Windows.Forms.Padding(1);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(67, 24);
@@ -327,10 +339,10 @@
             // button2
             // 
             this.button2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.button2.Location = new System.Drawing.Point(626, 1);
+            this.button2.Location = new System.Drawing.Point(624, 1);
             this.button2.Margin = new System.Windows.Forms.Padding(0);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(56, 26);
+            this.button2.Size = new System.Drawing.Size(58, 26);
             this.button2.TabIndex = 3;
             this.button2.Text = "重置";
             this.button2.UseVisualStyleBackColor = true;
@@ -366,7 +378,7 @@
             this.tableLayoutPanel5.ColumnCount = 1;
             this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
             this.tableLayoutPanel5.Controls.Add(this.tableLayoutPanel12, 0, 3);
-            this.tableLayoutPanel5.Controls.Add(this.tableLayoutPanel11, 0, 2);
+            this.tableLayoutPanel5.Controls.Add(this.tableLayoutPanel11, 0, 1);
             this.tableLayoutPanel5.Controls.Add(this.tableLayoutPanel9, 0, 1);
             this.tableLayoutPanel5.Controls.Add(this.tableLayoutPanel6, 0, 5);
             this.tableLayoutPanel5.Controls.Add(this.tableLayoutPanel7, 0, 6);
@@ -377,9 +389,9 @@
             this.tableLayoutPanel5.RowCount = 7;
             this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 13.82114F));
             this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 52F));
-            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 56F));
-            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 63F));
-            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 166F));
+            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
+            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 61F));
+            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 194F));
             this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 77F));
             this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 48F));
             this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
@@ -396,12 +408,12 @@
             this.tableLayoutPanel12.Controls.Add(this.buttonHex, 1, 0);
             this.tableLayoutPanel12.Controls.Add(this.buttonEEPROM, 1, 1);
             this.tableLayoutPanel12.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel12.Location = new System.Drawing.Point(3, 162);
+            this.tableLayoutPanel12.Location = new System.Drawing.Point(3, 136);
             this.tableLayoutPanel12.Name = "tableLayoutPanel12";
             this.tableLayoutPanel12.RowCount = 2;
             this.tableLayoutPanel12.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel12.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel12.Size = new System.Drawing.Size(267, 57);
+            this.tableLayoutPanel12.Size = new System.Drawing.Size(267, 55);
             this.tableLayoutPanel12.TabIndex = 8;
             // 
             // textBoxHex
@@ -415,7 +427,7 @@
             // textBox5
             // 
             this.textBox5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.textBox5.Location = new System.Drawing.Point(3, 31);
+            this.textBox5.Location = new System.Drawing.Point(3, 30);
             this.textBox5.Name = "textBox5";
             this.textBox5.Size = new System.Drawing.Size(137, 20);
             this.textBox5.TabIndex = 1;
@@ -425,7 +437,7 @@
             this.buttonHex.Dock = System.Windows.Forms.DockStyle.Fill;
             this.buttonHex.Location = new System.Drawing.Point(146, 3);
             this.buttonHex.Name = "buttonHex";
-            this.buttonHex.Size = new System.Drawing.Size(118, 22);
+            this.buttonHex.Size = new System.Drawing.Size(118, 21);
             this.buttonHex.TabIndex = 2;
             this.buttonHex.Text = "打开程序文件";
             this.buttonHex.UseVisualStyleBackColor = true;
@@ -434,9 +446,9 @@
             // buttonEEPROM
             // 
             this.buttonEEPROM.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.buttonEEPROM.Location = new System.Drawing.Point(146, 31);
+            this.buttonEEPROM.Location = new System.Drawing.Point(146, 30);
             this.buttonEEPROM.Name = "buttonEEPROM";
-            this.buttonEEPROM.Size = new System.Drawing.Size(118, 23);
+            this.buttonEEPROM.Size = new System.Drawing.Size(118, 22);
             this.buttonEEPROM.TabIndex = 3;
             this.buttonEEPROM.Text = "打开EEPROM文件";
             this.buttonEEPROM.UseVisualStyleBackColor = true;
@@ -446,31 +458,18 @@
             this.tableLayoutPanel11.ColumnCount = 2;
             this.tableLayoutPanel11.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 98F));
             this.tableLayoutPanel11.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel11.Controls.Add(this.label6, 0, 1);
             this.tableLayoutPanel11.Controls.Add(this.label5, 0, 0);
             this.tableLayoutPanel11.Controls.Add(this.comboBoxSpeed, 1, 0);
-            this.tableLayoutPanel11.Controls.Add(this.comboBoxTrim, 1, 1);
             this.tableLayoutPanel11.Location = new System.Drawing.Point(1, 104);
             this.tableLayoutPanel11.Margin = new System.Windows.Forms.Padding(1);
             this.tableLayoutPanel11.Name = "tableLayoutPanel11";
-            this.tableLayoutPanel11.RowCount = 2;
+            this.tableLayoutPanel11.RowCount = 1;
             this.tableLayoutPanel11.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel11.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 29F));
             this.tableLayoutPanel11.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel11.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel11.Size = new System.Drawing.Size(271, 54);
+            this.tableLayoutPanel11.Size = new System.Drawing.Size(271, 28);
             this.tableLayoutPanel11.TabIndex = 7;
-            // 
-            // label6
-            // 
-            this.label6.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label6.Location = new System.Drawing.Point(3, 25);
-            this.label6.MaximumSize = new System.Drawing.Size(265, 22);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(92, 22);
-            this.label6.TabIndex = 7;
-            this.label6.Text = "晶振速度(Khz)：";
-            this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // label5
             // 
@@ -500,24 +499,6 @@
             this.comboBoxSpeed.Name = "comboBoxSpeed";
             this.comboBoxSpeed.Size = new System.Drawing.Size(167, 21);
             this.comboBoxSpeed.TabIndex = 5;
-            // 
-            // comboBoxTrim
-            // 
-            this.comboBoxTrim.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.comboBoxTrim.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBoxTrim.FormattingEnabled = true;
-            this.comboBoxTrim.Items.AddRange(new object[] {
-            "5529",
-            "6000",
-            "11059",
-            "12000",
-            "16000",
-            "18432"});
-            this.comboBoxTrim.Location = new System.Drawing.Point(101, 28);
-            this.comboBoxTrim.MaximumSize = new System.Drawing.Size(265, 0);
-            this.comboBoxTrim.Name = "comboBoxTrim";
-            this.comboBoxTrim.Size = new System.Drawing.Size(167, 21);
-            this.comboBoxTrim.TabIndex = 8;
             // 
             // tableLayoutPanel9
             // 
@@ -722,19 +703,21 @@
             this.tabControl2.Controls.Add(this.tabPage5);
             this.tabControl2.Controls.Add(this.tabPage6);
             this.tabControl2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tabControl2.Location = new System.Drawing.Point(3, 225);
+            this.tabControl2.Location = new System.Drawing.Point(3, 197);
             this.tabControl2.Name = "tabControl2";
             this.tabControl2.SelectedIndex = 0;
-            this.tabControl2.Size = new System.Drawing.Size(267, 160);
+            this.tabControl2.Size = new System.Drawing.Size(267, 188);
             this.tabControl2.TabIndex = 9;
             // 
             // tabPage5
             // 
+            this.tabPage5.Controls.Add(this.comboBoxTrim);
+            this.tabPage5.Controls.Add(this.label9);
             this.tabPage5.Controls.Add(this.checkBoxEraseEEPROM);
             this.tabPage5.Location = new System.Drawing.Point(4, 22);
             this.tabPage5.Name = "tabPage5";
             this.tabPage5.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage5.Size = new System.Drawing.Size(259, 134);
+            this.tabPage5.Size = new System.Drawing.Size(259, 162);
             this.tabPage5.TabIndex = 0;
             this.tabPage5.Text = "硬件选项";
             this.tabPage5.UseVisualStyleBackColor = true;
@@ -752,6 +735,10 @@
             // 
             // tabPage6
             // 
+            this.tabPage6.Controls.Add(this.buttonCustomHelp);
+            this.tabPage6.Controls.Add(this.buttonClearCustom);
+            this.tabPage6.Controls.Add(this.label8);
+            this.tabPage6.Controls.Add(this.textBoxCustomCommands);
             this.tabPage6.Location = new System.Drawing.Point(4, 22);
             this.tabPage6.Name = "tabPage6";
             this.tabPage6.Padding = new System.Windows.Forms.Padding(3);
@@ -759,6 +746,102 @@
             this.tabPage6.TabIndex = 1;
             this.tabPage6.Text = "自定义参数";
             this.tabPage6.UseVisualStyleBackColor = true;
+            // 
+            // buttonCustomHelp
+            // 
+            this.buttonCustomHelp.Location = new System.Drawing.Point(87, 105);
+            this.buttonCustomHelp.Name = "buttonCustomHelp";
+            this.buttonCustomHelp.Size = new System.Drawing.Size(75, 23);
+            this.buttonCustomHelp.TabIndex = 3;
+            this.buttonCustomHelp.Text = "指令帮助";
+            this.buttonCustomHelp.UseVisualStyleBackColor = true;
+            // 
+            // buttonClearCustom
+            // 
+            this.buttonClearCustom.Location = new System.Drawing.Point(6, 105);
+            this.buttonClearCustom.Name = "buttonClearCustom";
+            this.buttonClearCustom.Size = new System.Drawing.Size(75, 23);
+            this.buttonClearCustom.TabIndex = 2;
+            this.buttonClearCustom.Text = "清空指令";
+            this.buttonClearCustom.UseVisualStyleBackColor = true;
+            this.buttonClearCustom.Click += new System.EventHandler(this.buttonClearCustom_Click);
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(6, 11);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(103, 13);
+            this.label8.TabIndex = 1;
+            this.label8.Text = "用户自定义参数：";
+            // 
+            // textBoxCustomCommands
+            // 
+            this.textBoxCustomCommands.Location = new System.Drawing.Point(6, 33);
+            this.textBoxCustomCommands.Multiline = true;
+            this.textBoxCustomCommands.Name = "textBoxCustomCommands";
+            this.textBoxCustomCommands.Size = new System.Drawing.Size(247, 66);
+            this.textBoxCustomCommands.TabIndex = 0;
+            // 
+            // tabPage7
+            // 
+            this.tabPage7.Controls.Add(this.dataGridView1);
+            this.tabPage7.Location = new System.Drawing.Point(4, 22);
+            this.tabPage7.Name = "tabPage7";
+            this.tabPage7.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage7.Size = new System.Drawing.Size(671, 247);
+            this.tabPage7.TabIndex = 3;
+            this.tabPage7.Text = "自定义参数表";
+            this.tabPage7.UseVisualStyleBackColor = true;
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.command,
+            this.value});
+            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dataGridView1.Location = new System.Drawing.Point(3, 3);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(665, 241);
+            this.dataGridView1.TabIndex = 1;
+            // 
+            // command
+            // 
+            this.command.HeaderText = "指令";
+            this.command.Name = "command";
+            // 
+            // value
+            // 
+            this.value.HeaderText = "可能的值";
+            this.value.Name = "value";
+            // 
+            // label9
+            // 
+            this.label9.Location = new System.Drawing.Point(6, 27);
+            this.label9.MaximumSize = new System.Drawing.Size(265, 22);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(92, 22);
+            this.label9.TabIndex = 8;
+            this.label9.Text = "晶振速度(Khz)：";
+            this.label9.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // comboBoxTrim
+            // 
+            this.comboBoxTrim.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxTrim.FormattingEnabled = true;
+            this.comboBoxTrim.Items.AddRange(new object[] {
+            "5529",
+            "6000",
+            "11059",
+            "12000",
+            "16000",
+            "18432"});
+            this.comboBoxTrim.Location = new System.Drawing.Point(92, 28);
+            this.comboBoxTrim.MaximumSize = new System.Drawing.Size(265, 0);
+            this.comboBoxTrim.Name = "comboBoxTrim";
+            this.comboBoxTrim.Size = new System.Drawing.Size(155, 21);
+            this.comboBoxTrim.TabIndex = 9;
             // 
             // MainUI
             // 
@@ -799,6 +882,10 @@
             this.tabControl2.ResumeLayout(false);
             this.tabPage5.ResumeLayout(false);
             this.tabPage5.PerformLayout();
+            this.tabPage6.ResumeLayout(false);
+            this.tabPage6.PerformLayout();
+            this.tabPage7.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -833,10 +920,8 @@
         private System.Windows.Forms.ComboBox comboBoxSerial;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel11;
-        private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.ComboBox comboBoxSpeed;
-        private System.Windows.Forms.ComboBox comboBoxTrim;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel12;
         private System.Windows.Forms.TextBox textBoxHex;
         private System.Windows.Forms.TextBox textBox5;
@@ -854,6 +939,16 @@
         private System.Windows.Forms.TabPage tabPage5;
         private System.Windows.Forms.TabPage tabPage6;
         private System.Windows.Forms.CheckBox checkBoxEraseEEPROM;
+        private System.Windows.Forms.Button buttonCustomHelp;
+        private System.Windows.Forms.Button buttonClearCustom;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.TextBox textBoxCustomCommands;
+        private System.Windows.Forms.TabPage tabPage7;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn command;
+        private System.Windows.Forms.DataGridViewTextBoxColumn value;
+        private System.Windows.Forms.ComboBox comboBoxTrim;
+        private System.Windows.Forms.Label label9;
     }
 }
 
